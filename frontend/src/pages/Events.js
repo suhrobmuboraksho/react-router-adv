@@ -2,20 +2,23 @@ import { Link } from "react-router-dom";
 
 const EventsPage = () => {
   const EVENTS = [
-    { id: "1", event: "Event 1" },
-    { id: "2", event: "Event 2" },
-    { id: "3", event: "Event 3" },
+    { id: "e1", title: "Event 1" },
+    { id: "e2", title: "Event 2" },
+    { id: "e3", title: "Event 3" },
   ];
   return (
-    <ul>
-      {EVENTS.map((event) => {
-        return (
-          <li key={event.id}>
-            <Link to={`/events/${event.id}`}>{event.event}</Link>
-          </li>
-        );
-      })}
-    </ul>
+    <>
+      <h1>Events Page</h1>
+      <ul>
+        {EVENTS.map((event) => {
+          return (
+            <li key={event.id}>
+              <Link to={event.id}>{event.title}</Link>
+            </li>
+          );
+        })}
+      </ul>
+    </>
   );
 };
 
