@@ -4,6 +4,7 @@ import ErrorPage from "./pages/Error";
 import EventsPage, { loader as eventsLoader } from "./pages/Events";
 import EventDetailPage, {
   loader as eventDetailLoader,
+  action as deleteEventAction,
 } from "./pages/EventDetail";
 import EventsRootLayout from "./pages/EventsRootLayout";
 import HomePage from "./pages/Home";
@@ -35,6 +36,7 @@ function App() {
                 {
                   index: true,
                   element: <EventDetailPage />,
+                  action: deleteEventAction,
                 },
                 { path: "edit", element: <EditEventPage /> },
               ],
